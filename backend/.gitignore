@@ -1,0 +1,12 @@
+# Virtual environments
+venv/
+venv_old/
+
+# Python bytecode
+__pycache__/
+
+# Environment variables
+.env
+
+# Uploaded files
+uploads/

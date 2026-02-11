@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+python-multipart
+pymongo
+python-dotenv
+email-validator
+passlib[argon2]
+python-jose[cryptography]
+fastapi-socketio
