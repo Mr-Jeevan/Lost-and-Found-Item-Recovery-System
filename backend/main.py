@@ -46,11 +46,16 @@ ACCESS_TOKEN_EXPIRE_MINUTES = 30
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 
 # CORS middleware setup 
+client_url = os.getenv("CLIENT_URI")
+
 origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
     "http://localhost:8000",
 ]
+
+if client_url:
+    origins.append(client_url)
 
 app.add_middleware(
     CORSMiddleware,
