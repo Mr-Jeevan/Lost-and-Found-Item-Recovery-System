@@ -7,10 +7,30 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Dependencies
+node_modules/
+
+# IDEs and other
+.idea/
+.project
+.classpath
+.c9/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Builds
+/dist
+/dist-ssr
+/build
+/coverage
 *.local
+
+# Environment files
+.env
+.env.*
 
 # Editor directories and files
 .vscode/*

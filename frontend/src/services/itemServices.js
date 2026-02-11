@@ -1,10 +1,10 @@
-// src/services/itemServices.js
-
 import axios from 'axios';
 
 // ✅ 1. Create and configure a central axios instance
+const baseURL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+
 const api = axios.create({
-  baseURL: 'http://localhost:8000', // Your backend URL
+  baseURL: baseURL,
 });
 
 // ✅ 2. Add an interceptor to automatically attach the auth token to every request
