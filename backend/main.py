@@ -1,5 +1,4 @@
-# main.py
-
+from fastapi.staticfiles import StaticFiles
 from fastapi import FastAPI, HTTPException, Depends, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
@@ -33,6 +32,8 @@ sio = SocketManager(app=app)
 
 # Serve static files for uploaded images
 from fastapi.staticfiles import StaticFiles
+if not os.path.exists("uploads"):
+    os.makedirs("uploads")
 app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
 
 # Security: Password Hashing Context
